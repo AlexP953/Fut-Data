@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="back" routerLink="../">
+  <fa-icon [icon]="faArrowLeft"></fa-icon>
+</div>
+
+<mat-card routerLink="/detalle-partido" *ngFor="let partido of partidos" (click)="navegar(partido.id)">
+  <div class="has-text-weight-bold">{{partido.resultado}}</div>
+  <div class="tipo-partido">{{partido.tipo}}</div>
+  <div class="fecha">{{partido.fecha}}</div>
+</mat-card>
+

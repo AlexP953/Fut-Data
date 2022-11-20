@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+<div class="back" routerLink="../">
+  <fa-icon [icon]="faArrowLeft"></fa-icon>
+</div>
+
+<div class="container" *ngIf="player">
+
+    <div class="player-description">
+
+        <div>
+            <h3 *ngIf="!player.mote">{{player.name}} {{player.surname}}</h3>
+            <h3 *ngIf="player.mote"> {{player.mote}}</h3>
+
+            <span style="font-style: italic;">"{{player.frase}}"</span>
+        </div>
+
+        <div>
+            <div class="image">
+                <img class="is-rounded" src="{{player.image}}"/>
+            </div>
+            <div class="has-text-centered"> {{player.birth|age}} {{'years' | translate}}</div>
+        </div>
+
+    </div>
+
+    <div class="data-player">
+        <div class="data-container">
+            <div class="icon-div">
+                <fa-icon [icon]="faTrophy"></fa-icon>
+            </div>
+            
+            <div class="individual-data"> 
+                <span>{{"games" | translate}}</span>
+                <span> {{player.games}} </span>
+            </div>
+        </div>
+
+        <div class="data-container">
+            <div class="icon-div">
+                <fa-icon [icon]="faFutbol"></fa-icon>
+            </div>
+             
+            <div class="individual-data"> 
+                <span>{{"goals" | translate}}</span>
+                <span> {{player.goals}} </span>
+            </div>
+        </div>
+
+        <div class="data-container">
+            <div class="icon-div">
+                <fa-icon [icon]="faStar"></fa-icon>
+            </div>
+            
+            <div class="individual-data"> 
+                <span>MVP</span>
+                <span> {{player.mvp}} </span>
+            </div>
+        </div>
+    </div>
+
+<div class="bottom-space"></div>
+
+</div>

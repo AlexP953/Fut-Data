@@ -1,0 +1,6 @@
+{
+	"appId": "com.futdata.app",
+	"appName": "Fut-Data",
+	"webDir": "dist/football2",
+	"bundledWebRuntime": false
+}

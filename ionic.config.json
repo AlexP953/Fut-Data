@@ -1,0 +1,12 @@
+{
+  "defaultProject": "football2",
+  "projects": {
+    "football2": {
+      "name": "football2",
+      "integrations": {
+        "cordova": {}
+      },
+      "type": "angular"
+    }
+  }
+}

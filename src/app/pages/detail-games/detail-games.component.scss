@@ -1,0 +1,63 @@
+.card {
+    width: 85% !important;
+    margin: 10% auto !important;
+    height: 700px !important;
+}
+
+.image {
+    width: 45px !important;
+    height: 45px !important;
+    margin-right: 5%;
+
+    .is-rounded {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+mat-card {
+    padding: 5px;
+    margin: 8px 10px;
+    display: flex;
+    align-items: center;
+}
+
+::ng-deep .mat-tab-body-content {
+    height: 66% !important;
+    max-height: 850px;
+}
+
+.resultado {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    height: 80px;
+    padding-top: 25px;
+}
+
+.data-container {
+    min-height: 700px;
+    margin: 15% 0;
+}
+
+.data {
+    display: flex;
+
+    div:first-of-type {
+        margin: 5% 10%;
+        font-size: 24px;
+    }
+
+    div:last-of-type {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+::ng-deep .mat-tab-label{
+    width: 50% !important;
+}

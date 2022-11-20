@@ -1,0 +1,37 @@
+
+
+<div class="container">
+
+  <div class="back" routerLink="../">
+  <fa-icon [icon]="faArrowLeft"></fa-icon>
+</div>
+
+  <div style="padding: 200px 0">
+    <div class="subcontainer">
+      <p class="has-text-centered mb-0 mx-3 mt-3">
+        {{"add_mail" | translate}}
+      </p>
+
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Email" [(ngModel)]='textoDeInput'/>
+        <span class="icon is-medium is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-medium is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
+
+      <button (click)="recover(textoDeInput)" class="button is-success">
+        {{"submit" | translate}}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="loading" class="spinner-container">
+    <div class="shadow"></div>
+    <div class="gravity">
+      <div class="ball"></div>
+    </div>
+</div>

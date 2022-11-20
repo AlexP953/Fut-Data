@@ -1,0 +1,40 @@
+@import "../../../styles.scss";
+
+.container {
+    background-color: $bluePrimary;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.subcontainer {
+    background-color: white;
+    width: 80%;
+    height: 85%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    input {
+        margin: 5% auto;
+    }
+
+    .button {
+        width: 50%;
+    }
+}
+
+.icon {
+    align-items: end !important;
+}
+
+.back {
+    position: relative !important;
+    left: 50px !important;
+    color: white !important;
+    top: 115px !important;
+}

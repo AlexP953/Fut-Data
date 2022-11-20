@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="back" routerLink="../">
+  <fa-icon [icon]="faArrowLeft"></fa-icon>
+</div>
+
+<div class="card">
+  <div class="resultado">{{ game.resultado }}</div>
+  <mat-tab-group>
+    <mat-tab label="Información" class="tab-one">
+      <div class="data-container">
+        <div class="data">
+          <div><fa-icon [icon]="faFutbol"></fa-icon></div>
+          <div>{{ game.tipo }}</div>
+        </div>
+        <div class="data">
+          <div><fa-icon [icon]="faCalendar"></fa-icon></div>
+          <div>{{ game.fecha }}</div>
+        </div>
+        <div class="data">
+          <div><fa-icon [icon]="faClock"></fa-icon></div>
+          <div>{{ game.hora }}</div>
+        </div>
+        <div class="data">
+          <div><fa-icon [icon]="faTransgender"></fa-icon></div>
+          <div>Mixto</div>
+        </div>
+        <div class="data">
+          <div><fa-icon [icon]="faMapMarker"></fa-icon></div>
+          <div>{{ game.lugar }}</div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Alineaciones">
+      <mat-card *ngFor="let player of players">
+        <div class="image">
+          <img class="is-rounded" src="{{ player.image }}" />
+        </div>
+        <div (click)="navegar(player.id)">
+          {{ player.name }}
+        </div>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<div class="bottom-space"></div>

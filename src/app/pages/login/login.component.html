@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="head-container">
+    <div class="logo">
+      <img src="../../../assets/LOGO-FUTDATA1.svg" />
+      <span>Fut-Data</span>
+    </div>
+    <h2 class="has-text-weight-bold">¡BIENVENIDO JUGADOR!</h2>
+  </div>
+
+  <div class="sub-container">
+    <form [formGroup]="oldUser" (ngSubmit)="login()" class="login-form">
+      <mat-label class="fontSize">Correo electrónico*</mat-label>
+      <mat-form-field
+        appearance="outline"
+        [ngClass]="{ erroneo: errorCode === 1 || errorCode === 2 }"
+      >
+        <input
+          matInput
+          id="name"
+          placeholder="Correo electrónico"
+          [formControlName]="'user'"
+        />
+        <mat-hint *ngIf="errorCode === 1 || errorCode === 2"
+          >Introduce un correo electrónico válido.</mat-hint
+        >
+      </mat-form-field>
+
+      <mat-label class="fontSize">Contraseña*</mat-label>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          [type]="hide ? 'password' : 'text'"
+          placeholder="Contraseña"
+          formControlName="pass"
+        />
+        <mat-hint *ngIf="errorCode === 3"
+          >La contraseña es incorrecta.</mat-hint
+        >
+
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div
+        class="center-text password-forgott fontSize"
+        routerLink="/recover-pass"
+      >
+        ¿Olvidaste tu contraseña?
+      </div>
+
+      <button class="btton fontSize" type="submit">ENTRAR</button>
+    </form>
+
+    <div routerLink="/register" class="center-text is-underlined fontSize">
+      Regístrate
+    </div>
+  </div>
+</div>
+
+<div class="bottom-space"></div>
+
+<div *ngIf="loading" class="spinner-container">
+  <div class="shadow"></div>
+  <div class="gravity">
+    <div class="ball"></div>
+  </div>
+</div>
+
+<div *ngIf="desktopDevice" class="isDesktop">
+  <div>
+    <div class="logo" style="margin: 90px auto 0 !important;">
+      <img src="../../../assets/LOGO-FUTDATA1.svg" />
+      <span>Fut-Data</span>
+    </div>
+    <p>
+      ¡Hola! Esta web está hecha exclusivamente para móviles y tablets. En caso
+      de utilizar Android puedes descargarte la aplicación, de lo contrario puedes
+      entrar por un navegador web de móvil.
+    </p>
+  </div>
+</div>

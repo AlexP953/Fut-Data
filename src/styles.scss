@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.ion-page {
+    display: block !important;
+}
+app-players {
+    overflow: auto !important;
+}
+
+$bluePrimary: #205374;
+$blueGreen: #27A09E;
+$greenPrimary: #30CE88;
+$greenSecond: #7DE393;
+$greenLight: #D6F6D1;
+$colorText: #6F6E6E;
+
+
+.mat-dialog-container {
+    min-width: 300px !important;
+    min-height: 300px !important;
+}
+
+.spinner-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background: #b3b0b061;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://cdn2.iconfinder.com/data/icons/activity-5/50/26BD-soccer-ball-128.png');
+    background-size: cover;
+    animation: roll .7s linear infinite;
+}
+
+@keyframes roll {
+    0% {}
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.bottom-space{
+    height: 40px;
+}
+
+.back {
+    margin: 35px 0 -30px 20px;
+    font-size: 1.5rem;
+}
+
+.style-error {
+    font-weight: bold;
+    background-color: red;
+}
+.style-okey {
+    font-weight: bold;
+    background-color: $greenPrimary;
+}

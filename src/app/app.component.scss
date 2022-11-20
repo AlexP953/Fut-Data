@@ -1,0 +1,24 @@
+@import "../styles.scss";
+
+app-players{
+    height: 90vh !important;
+    overflow: auto !important;
+}
+
+.logo{
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    z-index: 5;
+    background: linear-gradient(90.04deg, #1F4762 -0.02%, #175A86 100.01%, #5FA8D7 100.02%);
+    img{
+        position: relative;
+        top: -35%;
+        width: 340px;
+        height: 340px;
+        filter: invert(1);
+    }
+}

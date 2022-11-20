@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div class="back" routerLink="../" style="margin-bottom: 0 !important;">
+  <fa-icon [icon]="faArrowLeft"></fa-icon>
+</div>
+
+<div class="is-flex is-justify-content-space-around mt-5">
+  <div (click)="sortList('jugadores')">{{ 'players' | translate}}</div>
+  <div (click)="sortList('partidos')">{{ 'games' | translate}}</div>
+  <div (click)="sortList('goles')">{{ 'goals' | translate}}</div>
+  <div (click)="sortList('mvp')">MVP</div>
+</div>
+<mat-card *ngFor="let player of players" (click)="navegar(player.id)">
+  <div class="image">
+    <img class="is-rounded" src="{{player.image}}"/>
+    <span> {{player.mote}}</span>
+  </div>
+
+  <div class="data">
+    <div> {{player.goals}} </div>
+  
+    <div> {{player.games}} </div>
+  
+    <div> {{player.mvp}} </div>
+  </div>
+
+
+</mat-card>
+
+<div class="bottom-space"></div>

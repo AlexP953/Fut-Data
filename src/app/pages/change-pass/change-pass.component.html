@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="back" routerLink="../">
+  <fa-icon [icon]="faArrowLeft"></fa-icon>
+</div>
+
+  <div style="padding: 40% 0">
+    <div class="subcontainer">
+      <p class="has-text-centered mb-0 mx-3 mt-3">
+        {{'add_pass' | translate}}
+      </p>
+
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" [type]="hide1 ? 'password' : 'text'" placeholder="Contraseña antigua" [(ngModel)]='oldPass'/>
+        <span class="icon is-medium is-left">
+          <i class="fas fa-key"></i>
+        </span>
+          <mat-icon (click)="hide1 = !hide1">{{ hide1 ? "visibility_off" : "visibility" }}</mat-icon>
+      </div>
+
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" [type]="hide2 ? 'password' : 'text'" placeholder="Contraseña nueva" [(ngModel)]='newPass'/>
+        <span class="icon is-medium is-left">
+          <i class="fas fa-key"></i>
+        </span>
+        <mat-icon (click)="hide2 = !hide2">{{ hide2 ? "visibility_off" : "visibility" }}</mat-icon>
+      </div>
+
+      <button (click)="change(oldPass,newPass)" class="button is-success">
+        {{'submit' | translate}}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="loading" class="spinner-container">
+    <div class="shadow"></div>
+    <div class="gravity">
+      <div class="ball"></div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<app-header></app-header>
+
+<div class="back" routerLink="../">
+  <fa-icon [icon]="faArrowLeft"></fa-icon>
+</div>
+
+<div class="data-player">
+  <form [formGroup]="updateUser" (ngSubmit)="updatePlayer()">
+    <!-- avatar -->
+    <div class="image">
+      <img class="is-rounded" src="{{ this.player.image }}" />
+      <div class="to-edit-avatar"><fa-icon [icon]="faPencil"></fa-icon></div>
+      <input #futureAvatar (change)="prepareImage($event)" type="file" />
+    </div>
+    <!-- //// -->
+    <div>
+      <label
+        >{{"name" | translate}}
+        <input formControlName="name" />
+      </label>
+    </div>
+
+    <div>
+      <label
+        >{{"surname" | translate}}
+        <input formControlName="surname" />
+      </label>
+    </div>
+
+    <div>
+      <label
+        >{{"nick" | translate}}
+        <input formControlName="mote" />
+      </label>
+    </div>
+
+    <div>
+      <label
+        >{{"birth" | translate}}
+        <input formControlName="birth" />
+      </label>
+    </div>
+
+    <div>
+      <label
+        >{{"mail" | translate}}
+        <input formControlName="mail" />
+      </label>
+    </div>
+
+    <div>
+      <label
+        >{{"mobile" | translate}}
+        <input formControlName="mobile" />
+      </label>
+    </div>
+
+    <mat-form-field appearance="fill">
+      <mat-label>{{"select_language" | translate}}</mat-label>
+      <mat-select disableRipple formControlName="language">
+        <mat-option value="esp">{{"spanish" | translate}}</mat-option>
+        <mat-option value="cat">{{"catalan" | translate}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div style="transform: translateY(-15px);">
+      <label>{{"phrase" | translate}}
+        <textarea
+          formControlName="frase"
+          style="height: 75px !important;padding-top:10px"
+        ></textarea>
+      </label>
+    </div>
+
+    <span style="position: relative;top: -20px;left: 255px;" routerLink="/change-pass">{{'change_pass' | translate }}</span>
+
+    <button class="button is-primary" type="submit">{{"update" | translate}}</button>
+  </form>
+</div>
+<div style="height: 50px;"></div>
+
+<div class="bottom-space"></div>
+
+<div *ngIf="loading" class="spinner-container">
+  <div class="shadow"></div>
+  <div class="gravity">
+    <div class="ball"></div>
+  </div>
+</div>

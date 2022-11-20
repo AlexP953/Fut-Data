@@ -1,0 +1,65 @@
+<!-- TODO6 -->
+<!-- <button (click)="mssg(player)"> ENVIAR CORREO </button> -->
+
+<app-header></app-header>
+
+
+<div class="next-game">
+  <h4>{{ "next_game" | translate }}</h4>
+
+  <div>
+    <!-- TODO7 -->
+    <span> EQUIPO 1 </span>
+    <span class="hour"> 18:00 </span>
+    <span> EQUIPO 2 </span>
+  </div>
+</div>
+
+
+<mat-card>
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>{{ "scorers" | translate }}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let player of moreGoals | slice: 0:3" (click)="navegar(player.id)">
+        <td class="td-avatar">
+          <img class="is-16x16 is-rounded" src="{{ player.image }}" />
+        </td>
+
+        <td>{{ player.name }}</td>
+
+        <td class="has-text-weight-bold is-size-4">{{ player.goals }}</td>
+      </tr>
+    </tbody>
+  </table>
+</mat-card>
+<span class="ranking-complete" routerLink="/players">{{ "see_ranking" | translate }}</span>
+
+<mat-card>
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th style=" white-space: nowrap;">{{ "more_games" | translate }}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let player of moreGames | slice: 0:3" (click)="navegar(player.id)">
+        <td class="td-avatar">
+          <img class="is-16x16 is-rounded" src="{{ player.image }}" />
+        </td>
+
+        <td>{{ player.name }}</td>
+
+        <td class="has-text-weight-bold is-size-4">{{ player.games }}</td>
+      </tr>
+    </tbody>
+  </table>
+</mat-card>
+<span class="ranking-complete" routerLink="/players">{{ "see_ranking" | translate }}</span>
+
+<div class="bottom-space"></div>

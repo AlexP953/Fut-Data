@@ -1,0 +1,66 @@
+.to-edit-avatar {
+    position: relative;
+    top: -25px;
+    font-size: 1.5rem;
+    left: 105px;
+}
+
+.back {
+    margin: 35px 0 -30px 20px;
+    font-size: 1.5rem;
+}
+
+.is-rounded {
+    max-width: 140px !important;
+    margin: 0 auto !important;
+    object-fit: cover;
+    height: 100%;
+}
+
+.image {
+    width: 127px !important;
+    height: 127px !important;
+    margin: 5% auto;
+
+    input {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 0px;
+        opacity: 0;
+    }
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 3% auto;
+    input, textarea{
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid gray;
+        padding-left: 4%;
+    }
+}
+
+.mat-form-field{
+    left: 7%;
+    width: 85%;
+}
+
+::ng-deep .mat-form-field-flex{
+        background-color: white !important;
+        border-radius: 8px !important;
+        border: 1px solid gray !important;
+}
+
+::ng-deep .mat-form-field-underline{
+    display: none !important;
+}
+
+button{
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "my-project-ftbl"
+  },
+  "targets": {
+    "my-project-ftbl": {
+      "hosting": {
+        "football2": [
+          "my-project-ftbl"
+        ]
+      }
+    }
+  }
+}

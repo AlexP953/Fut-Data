@@ -1,0 +1,28 @@
+.image {
+    width: 60px !important;
+    height: 64px !important;
+    order: 2 !important;
+    margin: 10px;
+
+    .is-rounded {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.navbar-burger {
+    color: white !important;
+    height: 4.25rem !important;
+    width: 4.25rem !important;
+    margin-right: auto !important;
+    margin-left:initial !important;
+    transform: translateY(10px);
+}
+
+.header{
+    background: linear-gradient(90.04deg, #1F4762 -0.02%, #175A86 100.01%, #5FA8D7 100.02%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.35);
+    border-radius: 0 0 8px 8px;
+}

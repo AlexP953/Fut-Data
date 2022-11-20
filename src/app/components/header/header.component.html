@@ -1,0 +1,47 @@
+<div >
+  <nav class="navbar header" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="image" (click)="changePage('/profile')">
+        <img class="is-rounded" src="{{ player.image }}" />
+      </div>
+      <a
+        role="button"
+        class="navbar-burger"
+        data-target="navMenu"
+        (click)="menuMobileActive = !menuMobileActive"
+        aria-label="menu"
+        aria-expanded="false"
+        *ngIf="player"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div
+      class="navbar-menu"
+      id="navMenu"
+      [ngClass]="menuMobileActive ? 'is-active' : ''"
+      *ngIf="player"
+    >
+      <div class="navbar-start">
+        <a class="navbar-item" (click)="changePage('/dashboard')"> Home </a>
+        <a class="navbar-item" (click)="changePage('/partidos')">
+          {{ "games" | translate }}
+        </a>
+        <a class="navbar-item" (click)="changePage('/players')">
+          {{ "players" | translate }}
+        </a>
+        <a
+          class="navbar-item"
+          *ngIf="player.isAdmin"
+          (click)="changePage('/adminPanel')"
+        >
+          {{ "panel" | translate }}
+        </a>
+        <a class="navbar-item" (click)="logout()"> {{"logout" | translate}} </a>
+      </div>
+    </div>
+  </nav>
+</div>

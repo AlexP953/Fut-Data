@@ -1,0 +1,119 @@
+@import "../../../styles.scss";
+
+
+mat-hint{
+    color: red;
+}
+
+input{
+    font-size: 17px;
+}
+
+.fontSize{
+    font-size: 15px !important;
+}
+
+.logo {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    text-align: center;
+    min-height: 190px;
+
+    img {
+        width: 30%;
+        margin: 45px auto 0;
+    }
+
+    span {
+        font-size: 18px;
+    }
+}
+
+.container {
+    overflow: auto;
+    height: 100vh;
+    top: -40px;
+    max-width: 405px !important;
+
+        min-height: 100vh;
+    h2 {
+        text-align: center;
+        color: $bluePrimary;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32.81px;
+    }
+
+    .sub-container{
+        margin-bottom: 100px;
+        margin-top: 55px;
+    }
+
+    .login-form {
+        width: 85%;
+        margin: 0 auto;
+
+        mat-form-field {
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+            border-radius: 8px !important;
+            border: 1px solid #BBB9BA;
+        }
+    }
+
+    .btton {
+        width: 100%;
+        height: 52px;
+        background: $greenPrimary;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        font-size: 15px;
+        color: white;
+        border: none;
+    }
+
+    div {
+        margin-top: 25px;
+    }
+
+    .center-text{
+        text-align: center;
+    }
+
+    mat-label, .password-forgott{
+        margin-left: 5px;
+        font-size: 12px;
+    }
+
+    .password-forgott{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+}
+
+.isDesktop{
+    z-index: 100;
+    background: $bluePrimary;
+    height: 105vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    div{
+        width: 50%;
+        margin: 20% auto;
+        background-color: white;
+        border-radius: 12px;
+        p{
+            position: relative;
+            top: -40px;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
