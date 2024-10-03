@@ -2,7 +2,7 @@
 
 ## Descripción
 
-[Fut-Data]([https://fut-data.com/login](https://my-project-ftbl.web.app/login)) es web hecha como proyecto personal donde administro una base de datos de fútbol de una liga amateur. Proporciona a los usuarios estadísticas, resultados y avisos de partidos de fútbol jugados y por jugar.
+[Fut-Data](https://my-project-ftbl.web.app/login) es web hecha como proyecto personal donde administro una base de datos de fútbol de una liga amateur. Proporciona a los usuarios estadísticas, resultados y avisos de partidos de fútbol jugados y por jugar.
 
 ## Hecho con
 
